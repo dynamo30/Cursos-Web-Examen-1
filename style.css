@@ -1,0 +1,170 @@
+/* style.css - Estilos para la Vista */
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    margin: 0;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    text-align: center;
+    color: #333;
+    margin-bottom: 30px;
+    padding: 20px 0;
+}
+
+header h1 {
+    font-size: 2.5em;
+    text-shadow: 3px 3px 6px rgba(0,0,0,0.2);
+    background: linear-gradient(45deg, #0056b3, #00a0e9);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    display: inline-block;
+    padding: 10px 20px;
+    border-bottom: 3px solid #0056b3;
+    position: relative;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+header h1:hover {
+    transform: scale(1.05);
+    text-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+}
+
+header h1::after {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 3px;
+    bottom: -3px;
+    left: 25%;
+    background: #00a0e9;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+header h1:hover::after {
+    transform: scaleX(1);
+}
+
+.buscador {
+    margin: 20px auto;
+    max-width: 500px;
+    display: flex;
+    gap: 10px;
+}
+
+.buscador input {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+}
+
+.buscador button {
+    padding: 10px 15px;
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.buscador button:hover {
+    background-color: #003d82;
+}
+
+main {
+    flex: 1;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.curso-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 200px;
+    padding: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    transform: translateY(0);
+}
+
+.curso-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.curso-card img {
+    width: 200px;
+    height: 120px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-bottom: 10px;
+    transition: transform 0.3s ease;
+}
+
+.curso-card:hover img {
+    transform: scale(1.05);
+}
+
+.curso-card h3 {
+    margin: 10px 0 5px;
+    font-size: 1.1em;
+    color: #0056b3;
+    transition: color 0.3s ease;
+}
+
+.curso-card:hover h3 {
+    color: #003d82;
+}
+
+.curso-card p {
+    margin: 0;
+    font-size: 0.9em;
+    color: #666;
+}
+
+.no-resultados {
+    text-align: center;
+    color: #666;
+    font-size: 1.2em;
+    margin: 30px 0;
+}
+
+footer {
+    text-align: center;
+    margin-top: 30px;
+    padding: 20px;
+    color: #666;
+    font-size: 0.9em;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.curso-card {
+    animation: fadeIn 0.6s ease-out forwards;
+    opacity: 0;
+}
+
+.curso-card:nth-child(1) { animation-delay: 0.1s; }
+.curso-card:nth-child(2) { animation-delay: 0.2s; }
+.curso-card:nth-child(3) { animation-delay: 0.3s; }
+.curso-card:nth-child(4) { animation-delay: 0.4s; }

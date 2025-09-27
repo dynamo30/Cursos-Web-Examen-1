@@ -1,0 +1,29 @@
+<!-- index.html - La Vista -->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Catálogo de Cursos - MVC</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Mis Cursos Favoritos</h1>
+        <div class="buscador">
+            <input type="text" id="buscar-curso" placeholder="Buscar curso...">
+            <button id="btn-buscar">Buscar</button>
+        </div>
+    </header>
+
+    <main>
+        <div id="catalogo-cursos" class="container">
+            <!-- El controlador llenará este espacio con los cursos -->
+        </div>
+    </main>
+
+    <!-- Importante: El modelo primero, luego el controlador -->
+    <script src="model.js"></script>
+    <script src="controller.js"></script>
+</body>
+</html>
